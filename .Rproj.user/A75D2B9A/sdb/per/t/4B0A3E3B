@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"R Notebook\"\noutput: html_notebook\n---\n\nThis is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. \n\nTry executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. \n\n```{r}\nlibrary(pdftools)\n```\n\n```{r}\ntxt <- pdf_text(\"Marcel Proust-A la recherche du temps perdu.pdf\")\n```\n\n```{r}\ndf<- as.data.frame(txt)\n```\n\n```{r}\nfull.txt<- paste(txt, collapse = '')\nsapply(gregexpr(\"\\\\S+\", full.txt), length)\nwrite(full.txt, file = \"Proust_A_la_recherche_du_temps_perdu.txt\")\n```\n\n",
+    "created" : 1494754834788.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3707022767",
+    "id" : "4B0A3E3B",
+    "lastKnownWriteTime" : 1494841477,
+    "last_content_update" : 1494841477721,
+    "path" : "~/workspace/keras_playground/proust_to_txt.Rmd",
+    "project_path" : "proust_to_txt.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

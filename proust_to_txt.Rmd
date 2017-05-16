@@ -1,0 +1,27 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(pdftools)
+```
+
+```{r}
+txt <- pdf_text("Marcel Proust-A la recherche du temps perdu.pdf")
+```
+
+```{r}
+df<- as.data.frame(txt)
+```
+
+```{r}
+full.txt<- paste(txt, collapse = '')
+sapply(gregexpr("\\S+", full.txt), length)
+write(full.txt, file = "Proust_A_la_recherche_du_temps_perdu.txt")
+```
+

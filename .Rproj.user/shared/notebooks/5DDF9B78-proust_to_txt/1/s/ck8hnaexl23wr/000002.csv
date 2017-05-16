@@ -1,0 +1,7 @@
+"0","full.txt<- paste(txt, collapse = '')"
+"0","sapply(gregexpr(""\\S+"", full.txt), length)"
+"1","[1]"
+"1"," 1238531"
+"1","
+"
+"0","write(full.txt, file = ""Proust_A_la_recherche_du_temps_perdu.txt"")"
